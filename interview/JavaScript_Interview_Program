@@ -1,0 +1,158 @@
+-----------
+**Reverse String**  //"vardhini Vishnu is name My"
+-----------
+function reverse(){
+    let str = "My name is Vishnu vardhini";
+    console.log("Given string: " + str);
+    
+    let arr = str.split(" ");
+    //console.log(arr);
+    
+    for(let i=0;i<(arr.length-1)/2;i++){
+        let first = i;
+        let last = arr.length-1-i;
+        let temp;
+        
+        temp = arr[first]
+        arr[first] = arr[last]
+        arr[last] = temp
+    }
+    //console.log(arr);
+    let revstr = arr.join(" ");
+    console.log("reverseString: " + revstr);
+}
+reverse();
+
+
+
+
+-----------
+**Reverse String**  //"yM eman si unhsiV inihsraV"
+-----------
+function reverse(){
+    let str = "My name is Vishnu vardhini";
+    
+    let arr = str.split(" ");
+    //console.log(arr);
+    
+    let reverseArr = [];
+    
+    for(let word of arr){
+        let splitword = word.split("");
+        //console.log(splitword);
+        
+        let reversesplitword = splitword.reverse();
+        //console.log(reversesplitword);
+        
+        let joinword = reversesplitword.join("");
+        //console.log(joinword);
+        
+        reverseArr.push(joinword);
+        
+    }
+    //console.log(reverseArr);
+    let revstr = reverseArr.join(" ");
+    console.log(revstr);
+}
+reverse();
+
+
+
+
+-----------
+**Reverse String**  //"inihsraV unhsiV si eman yM"
+-----------
+function reverse(){
+    let str = "My name is Vishnu vardhini";
+    
+    let arr = str.split(" ");
+    //console.log(arr);
+    
+    let reverseArr = [];
+    
+    for(let word of arr){
+        let splitword = word.split("");
+        //console.log(splitword);    
+        
+        let reversesplitword = splitword.reverse();
+        //console.log(reversesplitword);
+        
+        let joinword = reversesplitword.join("");
+        //console.log(joinword);
+        
+        reverseArr.push(joinword);
+    }
+    //console.log(reverseArr);
+    let revArr = reverseArr.reverse();
+    //console.log(revArr);
+    
+    let revstr = revArr.join(" ");
+    console.log(revstr);
+   
+ }
+reverse();
+
+****----------------------------------------------------------------------------****
+
+--------
+**duplicate number**  //print array without duplicates
+--------
+function duplicate(){ 
+    let arr = [6,8,9,8,0,4,9,2,1,0];
+    let obj = {};
+   
+    for(let i=0;i<arr.length;i++){
+        let ele = arr[i];
+        if(obj[ele]){
+            obj[ele] = obj[ele] + 1;
+        }else{
+            obj[ele] = 1;
+        }
+    }
+    //console.log(obj);
+    let dupArr = [];
+    
+    for(let key in obj){
+        //console.log(key, obj[key]);
+        
+     if(obj[key] == 1){
+         dupArr.push(parseInt(key));
+    }
+    }
+    console.log(dupArr);
+}
+duplicate();
+
+
+
+
+--------
+**duplicate number**  // print array only duplicates
+--------
+function duplicate(){
+    let arr = [6,8,9,8,0,4,9,2,1,0];
+    let obj = {};
+    
+    for(let i=0;i<arr.length;i++){
+        let ele = arr[i];
+     if(obj[ele]){
+         obj[ele] = obj[ele] + 1;
+     }else{
+         obj[ele] = 1;
+     }
+    }
+    //console.log(obj);
+    let dupArr = [];
+    
+    for(let key in obj){
+       // console.log(key, obj[key]);
+    
+    if(obj[key] == 2){
+        dupArr.push(parseInt(key));
+    }
+ }
+ console.log(dupArr);
+    
+    
+}
+duplicate();
